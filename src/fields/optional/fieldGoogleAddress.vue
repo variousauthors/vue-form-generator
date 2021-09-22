@@ -42,7 +42,7 @@ export default {
 				window.google.maps.places.Autocomplete
 			) {
 				this.autocomplete = new google.maps.places.Autocomplete(this.$el, {
-					types: ["geocode"]
+					types: this.schema.types || ["geocode"]
 				});
 
 				this.autocomplete.addListener("place_changed", this.pipeAddress);
